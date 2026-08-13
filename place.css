@@ -1,0 +1,414 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #475569;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+
+/* =========================
+   PREPARATION SECTION
+========================= */
+
+.prep-section {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+}
+
+.prep-section h2 {
+    margin-bottom: 22px;
+    color: #1e3a8a;
+    font-size: 24px;
+}
+
+.prep-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.prep-box {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.prep-box label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.prep-box input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.2s;
+    background: white;
+}
+
+.prep-box input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+}
+
+#updateBtn {
+    margin-top: 24px;
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#updateBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37,99,235,0.35);
+}
+
+
+/* =========================
+   PROGRESS SECTION
+========================= */
+
+.progress-section {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+}
+
+.progress-box {
+    margin-bottom: 24px;
+}
+
+.progress-box label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+progress {
+    width: 100%;
+    height: 16px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background: #e2e8f0;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 20px;
+}
+
+#dsaProgress::-webkit-progress-value {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+#aptitudeProgress::-webkit-progress-value {
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+}
+
+#mockProgress::-webkit-progress-value {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+.progress-box span {
+    display: block;
+    margin-top: 8px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section,
+.table-section {
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
+}
+
+.form-section h2,
+.table-section h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+form input,
+form select {
+    padding: 13px 15px;
+    border: 2px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #f8fbff;
+    transition: 0.2s;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+}
+
+form button {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(22,163,74,0.35);
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+thead {
+    background: #eff6ff;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+
+/* STATUS BADGES */
+
+.status {
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.Applied {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.OnlineAssessment {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.Interview {
+    background: #e0e7ff;
+    color: #3730a3;
+}
+
+.Selected {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.Rejected {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* DELETE BUTTON */
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #64748b;
+    margin-top: 18px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prep-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .prep-section,
+    .progress-section,
+    .form-section,
+    .table-section {
+        padding: 22px;
+    }
+
+    .card p {
+        font-size: 28px;
+    }
+}

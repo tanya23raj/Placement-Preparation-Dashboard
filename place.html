@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Preparation Dashboard</title>
+  <link rel="stylesheet" href="place.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>Placement Preparation Dashboard</h1>
+      <p>Track your preparation and company applications</p>
+    </header>
+
+
+    <!-- Dashboard Cards -->
+    <section class="stats">
+
+      <div class="card">
+        <h3>DSA Problems</h3>
+        <p id="dsaCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Aptitude Questions</h3>
+        <p id="aptitudeCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Mock Interviews</h3>
+        <p id="mockCount">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Total Applications</h3>
+        <p id="applicationCount">0</p>
+      </div>
+
+    </section>
+
+
+    <!-- Update Preparation -->
+    <section class="prep-section">
+
+      <h2>Update Preparation</h2>
+
+      <div class="prep-grid">
+
+        <!-- DSA -->
+        <div class="prep-box">
+          <label>DSA Solved</label>
+          <input type="number" id="dsaInput" placeholder="Completed" min="0">
+        </div>
+
+        <div class="prep-box">
+          <label>Target DSA</label>
+          <input type="number" id="dsaTargetInput" placeholder="Target" min="1">
+        </div>
+
+
+        <!-- Aptitude -->
+        <div class="prep-box">
+          <label>Aptitude Solved</label>
+          <input type="number" id="aptitudeInput" placeholder="Completed" min="0">
+        </div>
+
+        <div class="prep-box">
+          <label>Target Aptitude</label>
+          <input type="number" id="aptitudeTargetInput" placeholder="Target" min="1">
+        </div>
+
+
+        <!-- Mock -->
+        <div class="prep-box">
+          <label>Mock Interviews Given</label>
+          <input type="number" id="mockInput" placeholder="Completed" min="0">
+        </div>
+
+        <div class="prep-box">
+          <label>Target Mock Interviews</label>
+          <input type="number" id="mockTargetInput" placeholder="Target" min="1">
+        </div>
+
+      </div>
+
+      <button id="updateBtn">Update Preparation</button>
+
+    </section>
+
+
+    <!-- Progress Section -->
+    <section class="progress-section">
+
+      <div class="progress-box">
+
+        <label>DSA Progress</label>
+
+        <progress id="dsaProgress" value="0" max="100"></progress>
+
+        <span id="dsaPercent">0%</span>
+
+      </div>
+
+
+      <div class="progress-box">
+
+        <label>Aptitude Progress</label>
+
+        <progress id="aptitudeProgress" value="0" max="100"></progress>
+
+        <span id="aptitudePercent">0%</span>
+
+      </div>
+
+
+      <div class="progress-box">
+
+        <label>Mock Interview Progress</label>
+
+        <progress id="mockProgress" value="0" max="100"></progress>
+
+        <span id="mockPercent">0%</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- Company Application Form -->
+    <section class="form-section">
+
+      <h2>Add Company Application</h2>
+
+      <form id="companyForm">
+
+        <input
+          type="text"
+          id="companyName"
+          placeholder="Company Name"
+          required
+        >
+
+        <input
+          type="text"
+          id="role"
+          placeholder="Role"
+          required
+        >
+
+        <input
+          type="date"
+          id="interviewDate"
+          required
+        >
+
+        <select id="status" required>
+          <option value="">Select Status</option>
+          <option value="Applied">Applied</option>
+          <option value="Online Assessment">Online Assessment</option>
+          <option value="Interview">Interview</option>
+          <option value="Selected">Selected</option>
+          <option value="Rejected">Rejected</option>
+        </select>
+
+        <button type="submit">Add Application</button>
+
+      </form>
+
+    </section>
+
+
+    <!-- Application Table -->
+    <section class="table-section">
+
+      <h2>Upcoming Interviews</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+
+        </thead>
+
+        <tbody id="companyList"></tbody>
+
+      </table>
+
+      <p id="emptyMessage">No applications added yet.</p>
+
+    </section>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="place.js"></script>
+
+</body>
+</html>
